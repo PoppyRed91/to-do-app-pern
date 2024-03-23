@@ -23,37 +23,49 @@ The PERN Todo App with Authentication is built using the following technologies:
 - **bcryptjs**: A library used for hashing and salting user passwords for secure storage.
 - **jsonwebtoken**: A library used for generating and verifying JSON web tokens (JWTs) for user authentication.
 - **react-coookie**: A library used for storing user data.
-  
+
 ## Installation
 
 To run the PERN Todo App with Authentication locally, follow these steps:
 
 1. Clone the repository:
-  ```
-   git clone https://github.com/melos-simeneh/PERN-Todo-App-with-Authentication.git
-  ```
+
+```
+ git clone
+```
+
 3. Navigate to the project directory:
-  ```
+
+```
 cd  PERN-Todo-App-with-Authentication
-  ```
+```
+
 4. Install the server-side dependencies:
- ```
+
+```
 cd server
 npm install
- ```
+```
+
 5. Install the client-side dependencies:
-  ```
+
+```
 cd client
 npm install
-  ```
+```
+
 7. Start the server:
- ```
+
+```
 npm run server
- ```
+```
+
 8. Start the client:
- ```
+
+```
 npm run server
- ```
+```
+
 9. Access the application by visiting http://localhost:3000 in your web browser.
 
 ## API Endpoints
@@ -63,8 +75,7 @@ The server-side application provides the following RESTful API endpoints:
 - POST **/api/auth/signup**: Register a new user.
 - POST **/api/auth/login**: Log in an existing user.
 - GET **/api/todos/users/:id**: Get all todos for the logged-in user.
-- GET **/api/todos**: Get all todos 
+- GET **/api/todos**: Get all todos
 - POST **/api/todos**: Create a new todo.
 - PUT **/api/todos/:id**: Update an existing todo.
 - DELETE **/api/todos/:id**: Delete a todo.
-
