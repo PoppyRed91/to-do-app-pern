@@ -7,7 +7,7 @@ exports.signup = async (req, res) => {
     let { username, password } = req.body;
     username = username.trim();
     const isUsernameExist = await pool.query(
-      "SELECT * FROM registered_users WHERE username=$1",
+      "SELECT * FROM users WHERE username=$1",
       [username]
     );
     if (isUsernameExist.rowCount !== 0)
@@ -15,12 +15,11 @@ exports.signup = async (req, res) => {
         staus: "fail",
         message: "Username is already taken",
       });
-    console.log(username + password)
     const id = uuidv4();
     const salt = bcrypt.genSaltSync(10);
     const hashedPassword = bcrypt.hashSync(password, salt);
     await pool.query(
-      "INSERT INTO registered_users(id,username,password) VALUES($1,$2,$3)",
+      "INSERT INTO users(id,username,password) VALUES($1,$2,$3)",
       [id, username, hashedPassword]
     );
     const token = jwt.sign({ id }, "secretkey", { expiresIn: "1h" });
@@ -43,7 +42,7 @@ exports.signup = async (req, res) => {
 exports.login = async (req, res) => {
   try {
     const { username, password } = req.body;
-    const user = await pool.query("SELECT * FROM registered_users WHERE username=$1", [
+    const user = await pool.query("SELECT * FROM users WHERE username=$1", [
       username,
     ]);
 

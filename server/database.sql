@@ -6,7 +6,7 @@ CREATE TABLE todos(
     date VARCHAR(255)
 )
 
-CREATE TABLE registered_users(
+CREATE TABLE users(
     id VARCHAR(255) PRIMARY KEY,
     username VARCHAR(255),
     password VARCHAR(255)
