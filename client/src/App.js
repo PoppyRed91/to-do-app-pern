@@ -43,7 +43,6 @@ function App() {
       ) : (
         <Auth />
       )}
-      <p className="copyright">© Melos</p>
     </div>
   );
 }

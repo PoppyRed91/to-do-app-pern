@@ -1,4 +1,4 @@
-# ✍️ PERN Todo APP with Authentication 🔐	
+## PERN Todo APP with Authentication
 
 This is a Todo App with authentication which is implemented using a PERN technologies (PostgreSQL, Express.js, React.js, Node.js). The application allows users to create, manage, and track their todos while providing user authentication to secure the application.
 
@@ -68,11 +68,3 @@ The server-side application provides the following RESTful API endpoints:
 - PUT **/api/todos/:id**: Update an existing todo.
 - DELETE **/api/todos/:id**: Delete a todo.
 
-## Contributing
-
-Contributions to the project are welcome. If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on the project repository.
-When contributing, please ensure to follow the existing code style and conventions and provide clear commit messages.
-
-## Thank You
-
-Thank you for taking the time to explore the Todo app. I hope it provides you with valuable information.

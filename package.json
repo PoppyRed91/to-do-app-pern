@@ -6,6 +6,5 @@
     "server":"cd server && npm start"
   },
   "proxy": "http://localhost:5050",
-  "author": "Melos",
   "license": "ISC"
 }
