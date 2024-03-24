@@ -20,7 +20,7 @@ function App() {
       const res = await response.json();
 
       setTasks(res.data.todos);
-    } catch (error) { }
+    } catch (error) {}
   };
 
   useEffect(() => {
@@ -35,7 +35,7 @@ function App() {
       <ToastContainer />
       {authToken ? (
         <div className="app">
-          <ListHeader listName="Holiday tick list" getData={getData} />
+          <ListHeader listName="My task list" getData={getData} />
           {sortedTasks?.map((task) => (
             <ListItem key={task.id} task={task} getData={getData} />
           ))}

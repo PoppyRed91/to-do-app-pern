@@ -19,7 +19,7 @@ const Modal = ({ mode, setShowModal, getData, task }) => {
     }
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_BASE_URL}/todos`,
+        `${process.env.REACT_APP_API_BASE_URL}todos`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
