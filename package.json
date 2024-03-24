@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "client": "cd client && npm start",
-    "server":"cd server && npm start"
+    "server": "cd server && npm start"
   },
-  "proxy": "http://localhost:5050",
+  "proxy": "http://localhost:5000",
   "license": "ISC"
 }

@@ -12,7 +12,7 @@ exports.signup = async (req, res) => {
     );
     if (isUsernameExist.rowCount !== 0)
       return res.status(400).json({
-        staus: "fail",
+        status: "fail",
         message: "Username is already taken",
       });
     const id = uuidv4();

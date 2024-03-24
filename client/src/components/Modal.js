@@ -7,7 +7,7 @@ const Modal = ({ mode, setShowModal, getData, task }) => {
   const editMode = mode === "edit" ? true : false;
   const [data, setData] = useState({
     user_id: editMode ? task.user_id : cookies.User.id,
-    title: editMode ? task.title : null,
+    title: editMode ? task.title : "",
     progress: editMode ? task.progress : 50,
     data: editMode ? task.date : new Date(),
   });
