@@ -23,6 +23,7 @@ const ListItem = ({ task, getData }) => {
       toast.error("Something went wrong");
     }
   };
+
   return (
     <div className="list-item">
       <div className="info-container" style={{ textAlign: "left" }}>

@@ -13,7 +13,7 @@ const ListHeader = ({ listName, getData }) => {
   return (
     <div className="list-header">
       <h1>{listName}</h1>
-      <div className="button-container">
+      <div className="button-container" style={{marginRight: "-9%"}}>
         <button className="create" onClick={() => setShowModal(true)}>
           ADD NEW
         </button>
