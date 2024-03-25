@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 import { useCookies } from "react-cookie";
+import logo from "../Logo.png";
 
 const Auth = () => {
   const [cookies, setCookie, removeCookie] = useCookies(null);
@@ -63,10 +64,8 @@ const Auth = () => {
   return (
     <div className="auth-container">
       <div className="auth-container-box">
+        <img className="TaskZilla_logo" src={logo} alt="TaskZilla Logo" />
         <form method="POST">
-          <h2 style={{ textAlign: "center" }}>
-            {isLogin ? "Welcome to TaskZilla" : "Welcome to TaskZilla"}
-          </h2>
           {error && (
             <div
               style={{
