@@ -55,7 +55,7 @@ const Auth = () => {
       <div className="auth-container-box">
         <form method="POST">
           <h2 style={{ textAlign: "center" }}>
-            {isLogin ? "Login to Todo App" : "Signup to Todo App"}
+            {isLogin ? "Welcome to TaskZilla" : "Welcome to TaskZilla"}
           </h2>
           {error && (
             <div

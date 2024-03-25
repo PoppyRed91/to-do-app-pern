@@ -13,7 +13,7 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/todos", todoRoutes);
 
-const PORT = 5000;
+const PORT = 5001;
 app.listen(PORT, () => {
   console.log(`Server is listening on http://localhost:${PORT}`);
 });
