@@ -11,10 +11,18 @@ body {
   background-color: #ffffffdb;
   box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px, rgba(0, 0, 0, 0.05) 0 0 0 1px;
   border-radius: 10px;
-  padding: 10px;
-  width: 90%;
+
+  
+ 
   height: 95vh;
+
+  padding: 2.5%;
+  width: 90%;
+
   margin-top: 50px;
+  padding-right: 10%;
+
+  margin-right: 10%;
 }
 
 .button-container,
@@ -119,10 +127,12 @@ input {
   box-shadow: #53724a 0 0 0 1px;
   display: flex;
   justify-content: space-between;
+  padding-right: 8%;
 }
 
 .tick {
   padding: 10px;
+  width: 15%;
 }
 
 .tick path {
@@ -238,7 +248,7 @@ input {
 }
 
 .outer-bar {
-  width: 200px;
+  width: 100%;
   height: 14px;
   background-color: rgb(216, 216, 216);
   border-radius: 7px;
@@ -252,5 +262,25 @@ input {
 }
 
 .task-title {
-  width: 300px;
+
+  width: 50vh;
 }
+@media (max-width: 560px) {
+  .task-title {
+    width: 30vh;
+  }
+}
+@media (max-width: 440px) {
+  .task-title {
+    width: 20vh;
+  }
+}
+
+
+@media (max-width: 530px) {
+  .auth-container-box {
+    width: auto;
+  }
+}
+
+
