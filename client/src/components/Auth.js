@@ -10,11 +10,14 @@ const Auth = () => {
   const [password, setPassword] = useState(null);
   const [confirmPassword, setConfirmPassword] = useState(null);
 
+  //viewLogin is defined to toggle between login and signup views.
+  // It sets error to null and updates the isLogin state.
   const viewLogin = (status) => {
     setError(null);
     setIsLogin(status);
   };
 
+  //function handleSubmit is defined to handle form submissions.
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (username === null || username.trim().length === 0) {
@@ -31,6 +34,9 @@ const Auth = () => {
     } else {
       setError(null);
       const endpoint = isLogin ? "login" : "signup";
+
+      // It sends a POST request to the backend API with username and password in the body.
+      // The URL is constructed using REACT_APP_API_BASE_URL environment variable.
       try {
         const response = await fetch(
           `${process.env.REACT_APP_API_BASE_URL}auth/${endpoint}`,
@@ -40,6 +46,10 @@ const Auth = () => {
             body: JSON.stringify({ username, password }),
           }
         );
+
+        // It parses the JSON response from the server.
+        // If the response status is 200, it sets cookies with user information and authentication token.
+        // If there's an error, it sets the error message.
         const res = await response.json();
         if (response.status === 200) {
           setCookie("User", res.user);
