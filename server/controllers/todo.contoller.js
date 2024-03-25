@@ -1,40 +1,13 @@
-/*
-pool imports a database connection pool from ../config/db, presumably connecting to a PostgreSQL database.
-uuidv4 from the uuid module is imported for generating unique identifiers.
-*/
-
 const pool = require("../config/db");
 const { v4: uuidv4 } = require("uuid");
-
-/*
-  This defines an asynchronous function createTodo exported as part of the module. It takes req (request) and res (response) objects as parameters, typically from an Express route handler.
-  It extracts user_id, title, progress, and date from the request body.
-*/
 
 exports.createTodo = async (req, res) => {
   try {
     let { user_id, title, progress, date } = req.body;
-
-    /*
-    This generates a new UUID (Universally Unique Identifier) using uuidv4() 
-    and trims any leading or trailing whitespace from the title.
-    */
     const id = uuidv4();
     title = title.trim();
-
-    /*
-    This SQL query string defines an INSERT statement to add a new record to the todos table, returning all columns (*). 
-    It uses parameterized queries for security against SQL injection attacks.
-    */
-
     const sql =
       "INSERT INTO todos (id,user_id,title,progress,date) VALUES($1,$2,$3,$4,$5) RETURNING *";
-
-    /*
-    This executes the SQL query with the parameters using the database connection pool (pool). 
-    It inserts a new todo into the database.
-    */
-
     const newTodo = await pool.query(sql, [id, user_id, title, progress, date]);
     res.status(201).json({
       status: "success",
@@ -50,12 +23,6 @@ exports.createTodo = async (req, res) => {
     });
   }
 };
-
-/*
-The updateTodo, deleteTodo, getAllTodos, getTodo, and getUserTodos 
-functions follow similar structures, performing CRUD (Create, Read, Update, Delete) 
-operations on the todos table in the database and handling success and error responses accordingly.
-*/
 
 exports.updateTodo = async (req, res) => {
   try {
