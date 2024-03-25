@@ -193,7 +193,7 @@ input {
   box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px, rgba(0, 0, 0, 0.08) 0 0 0 1px;
 }
 .auth-container-box form {
-  background-color: #ffffffdb;
+  background-color: #e6e4da;
   display: flex;
   flex-direction: column !important;
   height: 350px;
