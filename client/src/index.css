@@ -227,3 +227,9 @@ input {
 .task-title {
   width: 300px;
 }
+
+@media (max-width: 530px) {
+  .auth-container-box {
+    width: auto;
+  }
+}
