@@ -205,6 +205,13 @@ input {
   background-color: #e6e4da;
   width: 90%;
   height: 95vh;
+  margin-left: auto;
+  margin-right: auto;
+  @media (max-width: 500px) {
+    .auth-container-box {
+      width: 90%;
+    }
+  }
 }
 
 .auth-container-box {
@@ -214,7 +221,10 @@ input {
   background-color: #e6e4da;
   margin-top: 50px;
   box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px, rgba(0, 0, 0, 0.08) 0 0 0 1px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .auth-container-box form {
   background-color: #e6e4da;
   display: flex;
