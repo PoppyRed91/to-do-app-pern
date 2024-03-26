@@ -1,5 +1,5 @@
 Welcome to our TASKZILLA Todo App with Authentication, built using the PERN stack (PostgreSQL, Express.js, React.js, Node.js). This application empowers users to manage their tasks efficiently while ensuring their data remains secure with user authentication.
-![TaskZilla interface](client/src/interface.png)
+![Taskzilla interface](client/src/interface.png)
 Key Features:
 
 User Authentication: Securely register and log in with unique usernames and passwords.
