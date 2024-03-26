@@ -1,81 +1,35 @@
-## PERN Todo APP with Authentication
+Welcome to our TASKZILLA Todo App with Authentication, built using the PERN stack (PostgreSQL, Express.js, React.js, Node.js). This application empowers users to manage their tasks efficiently while ensuring their data remains secure with user authentication.
+![TaskZilla interface](client/src/interface.png)
+Key Features:
 
-This is a Todo App with authentication which is implemented using a PERN technologies (PostgreSQL, Express.js, React.js, Node.js). The application allows users to create, manage, and track their todos while providing user authentication to secure the application.
+User Authentication: Securely register and log in with unique usernames and passwords.
+To Do Management: Create, update, and delete todos effortlessly.
+To Do Listing: View a comprehensive list of todos, including their status.
+User Logout: Safely logout from your account when done.
 
-## Features
+Technologies Utilized:
 
-- **User signup**: Users can create an account by providing a unique username and password.
-- **User login**: Registered users can log in to the application using their credentials.
-- **Todo creation**: Users can create new todos by providing a title and description.
-- **Todo listing**: Users can view a list of all their todos along with their status.
-- **Todo updating**: Users can update the title, description, and status of existing todos.
-- **Todo deletion**: Users can delete unwanted todos.
-- **User logout**: Logged-in users can log out from the application.
+PostgreSQL: Our robust database system ensures reliable storage of user and to do data.
+Express.js: A powerful web application framework that facilitates the creation of RESTful APIs on the server-side.
+Node.js: The backbone of our application, providing a runtime environment for server-side code execution.
+React.js: Enhances the user experience with an interactive and responsive client-side interface.
+bcryptjs: Ensures the security of user passwords through hashing and salting techniques.
+jsonwebtoken: Provides seamless user authentication by generating and validating JSON web tokens.
+react-cookie: Facilitates the storage of user data, enhancing the application's functionality.
 
-## Technologies Used
+API Endpoints:
 
-The PERN Todo App with Authentication is built using the following technologies:
+Our server-side application offers a RESTful API with the following endpoints:
 
-- **PostgreSQL**: A powerful open-source relational database management system used to store user and todo data.
-- **Express.js**: A flexible and minimal web application framework for Node.js used to build the server-side application and RESTful APIs.
-- **Node.js**: A JavaScript runtime environment used to execute server-side code for the application.
-- **React.js**: A JavaScript library for building user interfaces used to create an interactive and responsive client-side application.
-- **bcryptjs**: A library used for hashing and salting user passwords for secure storage.
-- **jsonwebtoken**: A library used for generating and verifying JSON web tokens (JWTs) for user authentication.
-- **react-coookie**: A library used for storing user data.
+User Authentication:
 
-## Installation
+POST /api/auth/signup: Register a new user.
+POST /api/auth/login: Log in an existing user.
+Todo Management:
 
-To run the PERN Todo App with Authentication locally, follow these steps:
-
-1. Clone the repository:
-
-```
- git clone
-```
-
-3. Navigate to the project directory:
-
-```
-cd  PERN-Todo-App-with-Authentication
-```
-
-4. Install the server-side dependencies:
-
-```
-cd server
-npm install
-```
-
-5. Install the client-side dependencies:
-
-```
-cd client
-npm install
-```
-
-7. Start the server:
-
-```
-npm run server
-```
-
-8. Start the client:
-
-```
-npm run server
-```
-
-9. Access the application by visiting http://localhost:3000 in your web browser.
-
-## API Endpoints
-
-The server-side application provides the following RESTful API endpoints:
-
-- POST **/api/auth/signup**: Register a new user.
-- POST **/api/auth/login**: Log in an existing user.
-- GET **/api/todos/users/:id**: Get all todos for the logged-in user.
-- GET **/api/todos**: Get all todos
-- POST **/api/todos**: Create a new todo.
-- PUT **/api/todos/:id**: Update an existing todo.
-- DELETE **/api/todos/:id**: Delete a todo.
+GET /api/todos/users/:id: Retrieve all todos for the logged-in user.
+GET /api/todos: Fetch all todos.
+POST /api/todos: Create a new todo.
+PUT /api/todos/:id: Update an existing todo.
+DELETE /api/todos/:id: Delete a todo.
+![To Do App interface](<client/src/to do app interface.png>)
