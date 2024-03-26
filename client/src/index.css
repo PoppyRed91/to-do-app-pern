@@ -8,13 +8,12 @@ body {
   font-family: Questrial, Arial, sans-serif;
 }
 .app {
-  background-color: #ffffffdb;
+  background-color: #e6e4da;
   box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px, rgba(0, 0, 0, 0.05) 0 0 0 1px;
   border-radius: 10px;
-
-  
- 
-  height: 95vh;
+  border-color: #53724a;
+  border: 1px solid;
+  height: 85vh;
 
   padding: 2.5%;
   width: 90%;
@@ -116,7 +115,10 @@ input {
   justify-content: space-between;
   border-bottom: rgba(0, 0, 0, 0.05) 1px solid;
 }
-
+.mini_logo {
+  width: 20%;
+  height: 20%;
+}
 /* List Item */
 
 .list-item {
@@ -137,14 +139,14 @@ input {
 
 .tick path {
   fill: none;
-  stroke: green;
+  stroke: #53724a;
   stroke-miterlimit: 10;
   stroke-width: 32px;
 }
 
 .tick polyline {
   fill: none;
-  stroke: green;
+  stroke: #53724a;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 32px;
@@ -165,7 +167,7 @@ input {
 
 .modal {
   width: 500px;
-  background-color: rgb(255, 255, 255);
+  background-color: #e6e4da;
   padding: 40px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px 0, rgba(0, 0, 0, 0.08) 0 0 0 1px;
@@ -180,7 +182,7 @@ input {
   background-color: transparent;
 }
 .modal .form-title-container button:active {
-  color: rgb(255, 50, 50);
+  color: darkred;
 }
 .modal form {
   display: flex;
@@ -262,7 +264,6 @@ input {
 }
 
 .task-title {
-
   width: 50vh;
 }
 @media (max-width: 560px) {
@@ -276,11 +277,8 @@ input {
   }
 }
 
-
 @media (max-width: 530px) {
   .auth-container-box {
     width: auto;
   }
 }
-
-

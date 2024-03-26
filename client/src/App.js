@@ -35,7 +35,7 @@ function App() {
       <ToastContainer />
       {authToken ? (
         <div className="app">
-          <ListHeader listName="TaskZilla" getData={getData} />
+          <ListHeader getData={getData} />
           {sortedTasks?.map((task) => (
             <ListItem key={task.id} task={task} getData={getData} />
           ))}
