@@ -1,9 +1,9 @@
-// This line imports the Pool class from the pg module. 
+// This line imports the Pool class from the pg module.
 // pg is a popular Node.js module for interacting with PostgreSQL databases.
 
 const Pool = require("pg").Pool;
 
-// This creates a new instance of the Pool class, which represents a pool 
+// This creates a new instance of the Pool class, which represents a pool
 // of PostgreSQL database connections.
 
 const pool = new Pool({
@@ -11,7 +11,7 @@ const pool = new Pool({
   password: "-RKub\\luuxXLg)P~",
   port: 5432,
   database: "group4",
-  host: "34.79.81.42"
+  host: "34.79.81.42",
 });
 
 module.exports = pool;
