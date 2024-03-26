@@ -3,6 +3,7 @@ node_modules
 node_modules/line
 /client/.env
 
+server/creds.json
 
 /.pnp
 .pnp.js
