@@ -1,4 +1,4 @@
-TWelcome to TASKZILLA!  
+Welcome to TASKZILLA!  
 To Do App with Authentication, built using the PERN stack (PostgreSQL, Express.js, React.js, Node.js).  
 This application empowers users to manage their tasks efficiently while ensuring their data remains secure with user authentication.
 
@@ -34,14 +34,13 @@ POST /api/todos: Create a new todo.
 PUT /api/todos/:id: Update an existing todo.  
 DELETE /api/todos/:id: Delete a todo.
 
-![App Screenshot](URL)
-
-This app is a group effort for our Hyper Island "Beyond the endpoint" course where we as frontend developers started learning backend with Node.js.
-Group 4 consists of:
 ![To Do App interface](<client/src/to do app interface.png>)
 
+This app is a group effort for our Hyper Island "Beyond the endpoint" course where we as frontend developers started learning backend with Node.js.
+
+Group 4 consists of:
 [Petra M.](https://github.com/PetraaM)
-[![Setayesh](https://github.com/setayeshnri)]
-[![Petra C.](https://github.com/PoppyRed91)]
-[![Moysis](https://github.com/MoysisPap)]
-[![Edward](https://github.com/Edw4l)]
+[Setayesh](https://github.com/setayeshnri)
+[Petra C.](https://github.com/PoppyRed91)
+[Moysis](https://github.com/MoysisPap)
+[Edward](https://github.com/Edw4l)
