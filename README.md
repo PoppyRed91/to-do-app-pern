@@ -40,7 +40,7 @@ This app is a group effort for our Hyper Island "Beyond the endpoint" course whe
 Group 4 consists of:
 ![To Do App interface](<client/src/to do app interface.png>)
 
-[![Petra M.](https://github.com/PetraaM)]
+[Petra M.](https://github.com/PetraaM)
 [![Setayesh](https://github.com/setayeshnri)]
 [![Petra C.](https://github.com/PoppyRed91)]
 [![Moysis](https://github.com/MoysisPap)]
