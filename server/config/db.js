@@ -2,16 +2,15 @@
 // pg is a popular Node.js module for interacting with PostgreSQL databases.
 
 const Pool = require("pg").Pool;
-const creds = require("../creds.json")
 // This creates a new instance of the Pool class, which represents a pool 
 // of PostgreSQL database connections.
 
 const pool = new Pool({
-  user: "group4",
-  password: creds.pass,
-  port: 5432,
-  database: "group4",
-  host: "34.79.81.42"
+  user: process.env.PGUSER,
+  password: process.env.PGPASSWORD,
+  port: process.env.PGPORT,
+  database: process.env.PGDATABASE,
+  host: process.env.PGHOST,
 });
 
 module.exports = pool;

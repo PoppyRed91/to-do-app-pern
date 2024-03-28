@@ -15,12 +15,12 @@ function App() {
   const getData = async () => {
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_BASE_URL}todos/users/${user.id}`
+        `${process.env.REACT_APP_BACKEND_URL}api/todos/users/${user.id}`
       );
       const res = await response.json();
 
       setTasks(res.data.todos);
-    } catch (error) {}
+    } catch (error) { }
   };
 
   useEffect(() => {

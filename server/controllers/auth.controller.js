@@ -1,5 +1,5 @@
 /*
-pool imports a database connection pool from ../config/db, presumably connecting to a PostgreSQL database.
+pool imports a database connection pool from ../config/db,  connecting to a PostgreSQL database.
 uuidv4 from the uuid module is imported for generating unique identifiers.
 bcrypt is imported for hashing passwords securely.
 jsonwebtoken is imported for generating and verifying JSON Web Tokens (JWTs).
