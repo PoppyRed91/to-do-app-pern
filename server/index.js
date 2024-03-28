@@ -16,7 +16,7 @@ These lines set up middleware for the Express application:
 cors() is used to enable CORS for all routes.
 express.json() is used to parse incoming JSON requests.
 */
-app.use(cors());
+//app.use(cors());
 app.use(express.json());
 
 //routes

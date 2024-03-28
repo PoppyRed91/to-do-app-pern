@@ -40,12 +40,11 @@ const Auth = () => {
       // The URL is constructed using REACT_APP_API_BASE_URL environment variable.
       try {
         const response = await fetch(
-          `http://to-do-app-pern-production.up.railway.app:5050/api/auth/${endpoint}`,
+          `http://34.32.135.56:5050/api/auth/${endpoint}`,
           {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify({ username, password }),
-            mode: "no-cors"
           }
         );
 
