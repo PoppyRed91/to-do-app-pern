@@ -35,6 +35,7 @@ the URL where the server is running.
 */
 
 const PORT = process.env.PORT;
-app.listen(PORT, () => {
-  console.log(`Server is listening on http://localhost:${PORT}`);
+const IP = "0.0.0.0"
+app.listen(PORT, IP, () => {
+  console.log(`Server is listening on ${IP}:${PORT}`);
 });
