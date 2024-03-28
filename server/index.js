@@ -34,7 +34,7 @@ When the server starts, it prints a message to the console indicating
 the URL where the server is running.
 */
 
-const PORT = process.env.PGPORT;
+const PORT = process.env.PORT || 5050;
 app.listen(PORT, () => {
   console.log(`Server is listening on http://localhost:${PORT}`);
 });
