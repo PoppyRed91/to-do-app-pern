@@ -1,5 +1,5 @@
 const express = require("express");
-const cors = require("cors");
+//const cors = require("cors");
 
 /*
 These lines import the route handlers for todo-related endpoints and authentication-related endpoints respectively. These handlers are defined in 
