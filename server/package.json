@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "build": "npm i"
+    "build": "npm i && $ npm install express --save"
   },
   "proxy": "http://localhost:5000",
   "license": "ISC",
@@ -18,7 +18,5 @@
     "pg": "^8.11.3",
     "uuid": "^9.0.0"
   },
-  "devDependencies": {
-    
-  }
+  "devDependencies": {}
 }
