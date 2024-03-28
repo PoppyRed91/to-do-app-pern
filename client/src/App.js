@@ -15,7 +15,7 @@ function App() {
   const getData = async () => {
     try {
       const response = await fetch(
-        `http://to-do-app-pern-production.up.railway.app/todos/users/${user.id}`, { mode: "no-cors" }
+        `http://to-do-app-pern-production.up.railway.app:5050/api/todos/users/${user.id}`,
       );
       const res = await response.json();
 
