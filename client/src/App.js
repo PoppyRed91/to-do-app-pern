@@ -18,9 +18,9 @@ function App() {
         `${process.env.REACT_APP_API_BASE_URL}todos/users/${user.id}`
       );
       const res = await response.json();
-
       setTasks(res.data.todos);
-    } catch (error) {}
+      return res
+    } catch (error) { }
   };
 
   useEffect(() => {
