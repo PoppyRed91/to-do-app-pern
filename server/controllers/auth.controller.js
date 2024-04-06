@@ -59,7 +59,7 @@ exports.signup = async (req, res) => {
 
     const token = jwt.sign({ id }, "secretkey", { expiresIn: "1h" });
     res.status(200).json({
-      staus: "success",
+      status: "success",
       message: "account created",
       token,
       user: { id, username },

@@ -106,7 +106,7 @@ exports.getAllTodos = async (req, res) => {
       user_id,
     ]);
     res.status(200).json({
-      staus: "success",
+      status: "success",
       result: todos.rowCount,
       data: { todos: todos.rows },
     });
@@ -127,12 +127,12 @@ exports.getTodo = async (req, res) => {
     const todo = await pool.query("SELECT * FROM todos WHERE id=$1", [id]);
     if (todo.rowCount === 0) {
       return res.status(404).json({
-        staus: "fail",
+        status: "fail",
         message: `Todo with id ${id} not found`,
       });
     }
     res.status(200).json({
-      staus: "success",
+      status: "success",
       data: { todo: todo.rows[0] },
     });
   } catch (error) {
@@ -152,7 +152,7 @@ exports.getUserTodos = async (req, res) => {
       id,
     ]);
     res.status(200).json({
-      staus: "success",
+      status: "success",
       result: todos.rowCount,
       data: { todos: todos.rows },
     });
