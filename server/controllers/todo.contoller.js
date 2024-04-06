@@ -101,7 +101,10 @@ exports.deleteTodo = async (req, res) => {
 
 exports.getAllTodos = async (req, res) => {
   try {
-    const todos = await pool.query("SELECT * FROM todos");
+    const { user_id } = req.params;
+    const todos = await pool.query("SELECT * FROM todos WHERE user_id=$1", [
+      user_id,
+    ]);
     res.status(200).json({
       staus: "success",
       result: todos.rowCount,

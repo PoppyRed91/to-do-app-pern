@@ -20,6 +20,7 @@ function App() {
       const res = await response.json();
 
       setTasks(res.data.todos);
+      return res;
     } catch (error) {}
   };
 

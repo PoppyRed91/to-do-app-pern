@@ -32,4 +32,3 @@ A GET request to "/users/:id" will execute the getUserTodos function from the to
 router.get("/users/:id", todoController.getUserTodos);
 
 module.exports = router;
-
