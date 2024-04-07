@@ -139,8 +139,10 @@ exports.deleteTodo = async (req, res) => {
 
 exports.getAllTodos = async (req, res) => {
   try {
+
     // TODO Remove this endpoint - not safe - not used in client either
     const todos = await pool.query("SELECT * FROM todos");
+
     res.status(200).json({
       status: "success",
       result: todos.rowCount,

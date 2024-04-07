@@ -101,13 +101,24 @@ exports.login = async (req, res) => {
         status: "fail",
         message: "Invalid username or password",
       });
+
     const id = user.rows[0].id;
     const token = jwt.sign({ id }, "secretkey", { expiresIn: "1h" });
-    res.status(200).json({
-      status: "success",
-      message: "login success",
-      token,
-      user: { id, username: user.rows[0].username },
+
+    // Verify the token before sending it in the response
+    jwt.verify(token, "secretkey", (err, decoded) => {
+      if (err) {
+        return res
+          .status(401)
+          .json({ message: "Failed to authenticate token" });
+      }
+      // If token is valid, send it along with the response
+      res.status(200).json({
+        status: "success",
+        message: "login success",
+        token,
+        user: { id, username: user.rows[0].username },
+      });
     });
   } catch (error) {
     console.log(error);
@@ -119,3 +130,5 @@ exports.login = async (req, res) => {
     });
   }
 };
+
+/*ova verzija radi*/
