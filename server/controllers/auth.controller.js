@@ -57,12 +57,15 @@ exports.signup = async (req, res) => {
     It includes the JWT token and user information (id and username).
     */
 
-    const token = jwt.sign({ id }, "secretkey", { expiresIn: "1h" });
+    const token = jwt.sign({ id, username }, process.env.JWT_SECRET, {
+      expiresIn: "1h",
+    });
     res.status(200).json({
       status: "success",
       message: "account created",
       token,
-      user: { id, username },
+      username,
+      id,
     });
   } catch (error) {
     res.status(500).json({

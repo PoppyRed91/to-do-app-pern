@@ -53,7 +53,8 @@ const Auth = () => {
         // If there's an error, it sets the error message.
         const res = await response.json();
         if (response.status === 200) {
-          setCookie("User", res.user);
+          setCookie("Username", res.username);
+          setCookie("UserId", res.id);
           setCookie("AuthToken", res.token);
         } else setError(res.message);
       } catch (error) {
@@ -101,9 +102,7 @@ const Auth = () => {
           <button
             onClick={() => viewLogin(false)}
             style={{
-              backgroundColor: !isLogin
-                ? "#53724A"
-                : "#CFD8BF",
+              backgroundColor: !isLogin ? "#53724A" : "#CFD8BF",
             }}
           >
             Sign Up
@@ -111,9 +110,7 @@ const Auth = () => {
           <button
             onClick={() => viewLogin(true)}
             style={{
-              backgroundColor: isLogin
-                ? "#53724A"
-                : "#CFD8BF",
+              backgroundColor: isLogin ? "#53724A" : "#CFD8BF",
             }}
           >
             Login

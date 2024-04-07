@@ -1,7 +1,10 @@
 const express = require("express");
 const todoController = require("../controllers/todo.contoller");
+const verifyToken = require("../middleware/auth.middleware");
 
 const router = express.Router();
+
+router.use(verifyToken);
 
 /*
 This block of code defines routes for the "/" endpoint.
@@ -10,7 +13,7 @@ A POST request to "/" will execute the createTodo function from the todoControll
 */
 router
   .route("/")
-  .get(todoController.getAllTodos)
+  .get(todoController.getAllTodos) // TODO remove - not safe
   .post(todoController.createTodo);
 
 /*
